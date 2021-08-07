@@ -1,0 +1,14 @@
+body{
+    background-color: whitesmoke;
+}
+
+form {
+    background-color: antiquewhite;
+    border: 10px ridge rgba(5, 5, 255, 0.562);
+    padding: 20px;
+    margin: 0px auto;
+}
+
+button {
+    box-shadow: 5px 5px 10px gray;
+}
