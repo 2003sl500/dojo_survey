@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
+app.secret_key = "29439238"
 
 @app.route('/')
 def index():
@@ -7,6 +8,8 @@ def index():
 
 @app.route('/process', methods=['POST'])
 def process():
+    session['form'] = request.form
+    print(request.form)
     return redirect('/result')
 
 @app.route('/result')
