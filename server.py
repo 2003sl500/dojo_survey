@@ -8,6 +8,7 @@ def index():
 
 @app.route('/process', methods=['POST'])
 def process():
+    session.clear()
     session['form'] = request.form
     print(request.form)
     return redirect('/result')
